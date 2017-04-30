@@ -7,7 +7,7 @@ docker run \
    --privileged \
    --detach=true \
    --name libvirtd \
-  alectolytic/libvirtd
+  raj77in/docker-libvirtd
 ```
 
 Or you can specify init to be run as command in following fashion.
@@ -17,7 +17,7 @@ docker run  --name libvirtd \
 	   --privileged -d -e 'container=docker' \
 	   -v /var/lib/libvirt/:/var/lib/libvirt/ \
 	   -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
-	   -p 16509:16509 raj77in/libvirtd /usr/sbin/init
+	   -p 16509:16509 raj77in/docker-libvirtd /usr/sbin/init
 ```
 
 Thanks to Arun Babu Neelicattu [Github repo](https://github.com/abn/dockerfiles)
